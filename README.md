@@ -1,3 +1,3 @@
 # Djakstras_Algorithm
 
-![](image.jpg)
+![](image.png)
