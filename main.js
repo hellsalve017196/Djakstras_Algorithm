@@ -89,14 +89,14 @@ class WeightedGraph {
                     
                     // calculate new distance to neighbourNode
                     let candidate = distance[smallest] + nextNode.weight;
-                    let nextNeighbour = nextNode.node;
-                    if(candidate < distance[nextNeighbour]) {
+                    let neighbourOfNextnode = nextNode.node;
+                    if(candidate < distance[neighbourOfNextnode]) {
                         // updating new smallest distance to neighbour
-                        distance[nextNeighbour] = candidate;
+                        distance[neighbourOfNextnode] = candidate;
                         // updating previous - how we got to neighbour
-                        previous[nextNeighbour] = smallest;
+                        previous[neighbourOfNextnode] = smallest;
                         // enque in priority que with new priority
-                        nodes.enque(nextNeighbour,candidate);
+                        nodes.enque(neighbourOfNextnode,candidate);
                     }
                 }
             }    
